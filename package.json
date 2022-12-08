@@ -1,0 +1,56 @@
+{
+  "name": "project-starters",
+  "version": "1.0.0",
+  "packageManager": "yarn@3.3.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "license": "MIT",
+  "description": "Frequently Used Yeoman Generators in my developer life.",
+  "homepage": "",
+  "author": {
+    "name": "刘文壮",
+    "email": "liu1114589929@gmail.com",
+    "url": "https://github.com/liuwenzhuang"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "yeoman",
+    "generator",
+    "boilerplate",
+    "starter"
+  ],
+  "devDependencies": {
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-unicorn": "^45.0.1",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{js,jsx,tsx,ts,less,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:unicorn/recommended",
+      "prettier"
+    ],
+    "ignorePatterns": [
+      "**/templates",
+      "coverage"
+    ]
+  }
+}
