@@ -1,0 +1,60 @@
+{
+  "name": "@lwz/generator-node-starter",
+  "version": "0.0.1",
+  "description": "Generate a node project.",
+  "homepage": "",
+  "author": {
+    "name": "刘文壮",
+    "email": "liu1114589929@gmail.com",
+    "url": "https://github.com/liuwenzhuang"
+  },
+  "repository": {
+    "url": "https://github.com/liuwenzhuang/project-starters",
+    "directory": "packages/generator-node-starter"
+  },
+  "license": "MIT",
+  "files": [
+    "app"
+  ],
+  "main": "app/index.js",
+  "keywords": [
+    "yeoman-generator",
+    "yeoman",
+    "generator",
+    "node",
+    "boilerplate"
+  ],
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "jest": "^29.3.1",
+    "yeoman-assert": "^3.1.1",
+    "yeoman-test": "^7.0.0"
+  },
+  "engines": {
+    "npm": ">= 10"
+  },
+  "dependencies": {
+    "chalk": "^4",
+    "lodash": "^4.17.21",
+    "mkdirp": "^1.0.4",
+    "yeoman-generator": "^5.7.0",
+    "yosay": "^2.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "eslintConfig": {
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "unicorn/prefer-module": 0,
+      "unicorn/prevent-abbreviations": 0
+    }
+  },
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest"
+  }
+}
